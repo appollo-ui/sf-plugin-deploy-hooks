@@ -1,0 +1,62 @@
+{
+  "name": "@appollo-ui/sf-plugin-deploy-hooks",
+  "version": "2.0.0",
+  "description": "SF CLI plugin that executes configurable bash scripts before and after deploy commands with AI-powered error analysis",
+  "author": "Matt Simonis",
+  "license": "MIT",
+  "homepage": "https://github.com/appollo-ui/sf-plugin-deploy-hooks#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appollo-ui/sf-plugin-deploy-hooks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/appollo-ui/sf-plugin-deploy-hooks/issues"
+  },
+  "keywords": [
+    "salesforce",
+    "sf-cli",
+    "sfdx",
+    "plugin",
+    "deploy",
+    "hooks",
+    "pre-deploy",
+    "post-deploy",
+    "ci-cd",
+    "automation",
+    "ai-analysis",
+    "copilot",
+    "error-analysis"
+  ],
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf lib",
+    "compile": "tsc",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "@oclif/core": "^4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5"
+  },
+  "oclif": {
+    "hooks": {
+      "prerun": "./lib/hooks/prerun.js",
+      "postrun": "./lib/hooks/postrun.js"
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
