@@ -7,7 +7,7 @@
   "homepage": "https://github.com/appollo-ui/sf-plugin-deploy-hooks#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/appollo-ui/sf-plugin-deploy-hooks.git"
+    "url": "git+https://github.com/appollo-ui/sf-plugin-deploy-hooks.git"
   },
   "bugs": {
     "url": "https://github.com/appollo-ui/sf-plugin-deploy-hooks/issues"
